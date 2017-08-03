@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Children</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Age</th>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% array = [] %>
+    <% @children.each do |hash| %>
+      <% hash.each do |key, value| %>
+      <% kids = hash.values %>
+      <% array << kids%>
+       <% end %>
+    <% end %>
+      <tr>
+     
+      <%array.uniq.each_with_index do |value|%>
+      <% text_field_tag :cell, child_params = {:glucose => value[0], :name => value[1]} %>
+      <%@child = Child.new(child_params)%>
+        <td><%= value[0]%></td>
+        <td><%= value[1]%></td>
+        <td><%= link_to 'Show', 'children/show'%></td>
+        </tr>
+     <%end%>
+    
+  </tbody>
+</table>
+<br>
+
+
+<%= link_to 'New Child', new_child_path %>
+

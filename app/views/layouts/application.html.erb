@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<script src="https://www.gstatic.com/firebasejs/3.6.7/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.6.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.6.2/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.6.2/firebase-messaging.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAhSsQKCK48TJdZCSMX5gGsHo4As_aUHjU",
+    authDomain: "postjson-d117c.firebaseapp.com",
+    databaseURL: "https://postjson-d117c.firebaseio.com",
+    storageBucket: "postjson-d117c.appspot.com",
+    messagingSenderId: "1004541428210"
+  };
+  firebase.initializeApp(config);
+</script>
+<html>
+  <head>
+    <title>POSTJSON</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= yield %>
+ 
+  </body>
+</html>

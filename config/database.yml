@@ -30,6 +30,6 @@ test:
 production:
   <<: *default
   database: POSTJSON_production
-  host: https://postjson-d117c.firebaseio.com
-  username: julieanne2864184@gmail.com
-  password: CiciBloom1
+  host: 'address'
+  username: 'username'
+  password: 'password'
